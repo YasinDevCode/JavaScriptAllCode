@@ -12,27 +12,28 @@ users.forEach(function(user) {
     console.log("Email Sent to " + user);
 });
 
-// Map Function
+// Map Fuction
+let newArray = array.map(function(item) {
+
+    return item;
+
+});
 let array = [1, 2, 3, 4, 5];
 
-// Example of creating a new array where each item is doubled.
-let newArray = array.map(function(item) {
-    return item * 2;
-});
-console.log(newArray); // Output: [ 2, 4, 6, 8, 10 ]
+let newArray2=array.map(function(item){
+    return item*2
+})
 
 //--Real life Project Example 10% discount
 let prices = [100, 200, 300];
 
 let discountPrice = prices.map(function(price) {
-    return price * 0.90; // Applying a 10% discount
+    return price - price * 0.10;
 });
 
 console.log(discountPrice);
 
 // Filter Function
-// This is a syntax example. 'condition' should be a boolean expression.
-/*
 let filteredArray = array.filter(function(item) {
 
 return condition;
@@ -41,7 +42,7 @@ return condition;
 
 // Real life Project Example
 // Example to filter products based on price
-let productsForFilter = [
+let products = [
     { name: "Product 1", price: 100 },
     { name: "Product 2", price: 200 },
     { name: "Product 3", price: 300 }
@@ -51,7 +52,7 @@ let filteredProducts = products.filter(function(product) {
     return product.price > 150;
 });
 
-console.log(filteredProducts); // Output: [{ name: "Product 2", price: 200 }, { name: "Product 3", price: 300 }]
+console.log(filteredProducts);
 // Example to find even numbers from an array
 let numbersArray = [1, 2, 3, 4, 5, 6];
 
@@ -59,11 +60,14 @@ let evenNumbers = numbersArray.filter(function(number) {
     return number % 2 === 0;
 });
 
-console.log(evenNumbers); // Output: [2, 4, 6]
+console.log(evenNumbers); //
 
 // Reduce Function
+let sum = array.reduce(function(accumulator, currentValue) {
+    return accumulator + currentValue;
+}, 0);  
 // Real life Project Example
-// Example to calculate the total price of product prices
+// Example to calculate the total price of products
 let productPrices = [100, 200, 300];
 let total = productPrices.reduce(function(accumulator, currentValue) {
     return accumulator + currentValue;
@@ -78,25 +82,25 @@ let maxNumber = numbersArray.reduce(function(max, currentValue) {
 console.log(maxNumber);
 // Real life Project Example
 // Login System
-let userList = [
+let users = [
     {id:1,name:"Rahim"},
     {id:2,name:"Yasin"},
     {id:3,name:"Karim"}
 ];
 
-let foundUser = userList.find(function(item){
+let user = users.find(function(item){
     return item.id === 2;
 });
 
 console.log(user);
 // Real life Project Example-2
 // Product Search
-let productList = [
+let products = [
     { name: "Product 1", price: 100 },
     { name: "Product 2", price: 200 },
     { name: "Product 3", price: 300 }
 ]; 
-let foundProduct = productList.find(function(item){
+let product = products.find(function(item){
     return item.name === "Product 2";
 });
-console.log(foundProduct); // Output: { name: "Product 2", price: 200 }
+console.log(product); // Output: { name: "Product 2", price: 200 }
