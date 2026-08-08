@@ -1,4 +1,5 @@
-// forEach Function
+
+// array.forEach() --রের প্রতিটি উপাদানের (element) জন্য একটি নির্দিষ্ট ফাংশন একবার করে রান বা এক্সিকিউট করে।
 let numbers = [10, 20, 30];
 
 numbers.forEach(function(number) {
@@ -12,7 +13,9 @@ users.forEach(function(user) {
     console.log("Email Sent to " + user);
 });
 
-// Map Fuction
+// array.map()------প্রতিটি Element পরিবর্তন করে নতুন Array Return করে । Original Array পরিবর্তন হয় না।
+
+
 let newArray = array.map(function(item) {
 
     return item;
@@ -33,7 +36,7 @@ let discountPrice = prices.map(function(price) {
 
 console.log(discountPrice);
 
-// Filter Function
+// array.filter() Function----Condition অনুযায়ী Element বেছে নতুন Array Return করে।
 let filteredArray = array.filter(function(item) {
 
 return condition;
@@ -62,7 +65,7 @@ let evenNumbers = numbersArray.filter(function(number) {
 
 console.log(evenNumbers); //
 
-// Reduce Function
+// array.reduce() Function----Array এর সব Element কে একত্রিত করে একটি Single Value Return করে।
 let sum = array.reduce(function(accumulator, currentValue) {
     return accumulator + currentValue;
 }, 0);  
